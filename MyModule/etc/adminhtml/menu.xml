@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="LeNgocAnh_MyModule::level1" title="LeNgocAnh" translate="title" module="LeNgocAnh_MyModule" parent="Magento_Backend::content" sortOrder="50" dependsOnModule="LeNgocAnh_MyModule" resource="LeNgocAnh_MyModule::level1" />
+        <add id="LeNgocAnh_MyModule::level2" title="MyModule" translate="title" module="LeNgocAnh_MyModule" parent="LeNgocAnh_MyModule::level1" sortOrder="10" dependsOnModule="LeNgocAnh_MyModule" action="mymodule/index" resource="LeNgocAnh_MyModule::level1" />
+
+        <add id="LeNgocAnh_MyModule::mymodule" title="MyModule" translate="title" module="LeNgocAnh_MyModule" sortOrder="51" dependsOnModule="LeNgocAnh_MyModule" resource="LeNgocAnh_MyModule::mymodule" />
+
+        <add id="LeNgocAnh_MyModule::post" title="MyModule" translate="title" module="LeNgocAnh_MyModule" parent="LeNgocAnh_MyModule::mymodule" sortOrder="10" dependsOnModule="LeNgocAnh_MyModule" action="mymodule/post" resource="LeNgocAnh_MyModule::post" />
+        <add id="LeNgocAnh_MyModule::mymodule_config" title="Configuration" translate="title" module="LeNgocAnh_MyModule" parent="LeNgocAnh_MyModule::mymodule" sortOrder="10" dependsOnModule="LeNgocAnh_MyModule" action="adminhtml/system_config/edit/section/mymodule" resource="LeNgocAnh_MyModule::mymodule_config" />
+    </menu>
+</config>
